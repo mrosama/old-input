@@ -35,6 +35,7 @@ module.exports = function(req, res, next)
 	if ( req.method === 'POST' )
 	{
 		req.session.oldInput = {};
+		//---------------------------------
                 req.body = JSON.parse(JSON.stringify(req.body));
 		for ( var name in req.body ) {
 			if ( req.body.hasOwnProperty(name) ) {
